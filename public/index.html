@@ -20,7 +20,7 @@
     <div id="root"></div>
 
     <p id="demo"></p>
-    <p id="demo_2"></p>
+    <!-- <p id="demo_2"></p> -->
     
     <!-- <h1>Regular Function</h1>
 
@@ -70,29 +70,35 @@
       // document.write("<p>Product: " + multiply + "</p>");
       // document.write("<p>Quotient: " + divide + "</p>");
 
-      const vehicleOne = {
-        brand: 'Ford',
-        model: 'Mustang',
-        type: 'car',
-        year: 2021,
-        color: 'red',
-        registration: {
-          city: 'Houston',
-          state: 'Texas',
-          country: 'USA'
-        }
-      }
+      // const vehicleOne = {
+      //   brand: 'Ford',
+      //   model: 'Mustang',
+      //   type: 'car',
+      //   year: 2021,
+      //   color: 'red',
+      //   registration: {
+      //     city: 'Houston',
+      //     state: 'Texas',
+      //     country: 'USA'
+      //   }
+      // }
       
-      myVehicle(vehicleOne);
+      // myVehicle(vehicleOne);
 
-      function myVehicle({type, color, brand, model, state}) {
-        const message = 'My ' + type + ' is a ' + color + ' ' + brand + ' ' + model + '.';
+      // function myVehicle({type, color, brand, model, state}) {
+      //   const message = 'My ' + type + ' is a ' + color + ' ' + brand + ' ' + model + '.';
 
-        const msg = 'My ' + model + ' is registered in ' + state + '.';
+      //   const msg = 'My ' + model + ' is registered in ' + state + '.';
 
-        document.getElementById('demo').innerHTML = message;
-        document.getElementById('demo_2').innerHTML = msg;
-      }
+      //   document.getElementById('demo').innerHTML = message;
+      //   document.getElementById('demo_2').innerHTML = msg;
+      // }
+
+      const numbersOne = [1, 2, 3];
+      const numbersTwo = [4, 5, 6];
+      const numbersCombined = [...numbersOne, ...numbersTwo];
+
+      document.write(numbersCombined);
     </script>
   </body>
 </html>
