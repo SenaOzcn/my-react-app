@@ -5,10 +5,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const myElement = (
-    <div>
-        <h1>I am a Header.</h1>
-        <h1>I am a Header too.</h1>
-    </div>
+    <>
+        <p>I am a paragraph.</p>
+        <p>I am a paragraph too.</p>
+    </>
 );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
