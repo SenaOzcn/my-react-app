@@ -19,7 +19,7 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
 
-    <p id="demo"></p>
+    <h1 id="demo"></h1>
     <!-- <p id="demo_2"></p> -->
     
     <!-- <h1>Regular Function</h1>
@@ -101,23 +101,40 @@
       // document.write("<p>" + two + "</p>");
       // document.write("<p>" + rest + "</p>");
 
-      const myVehicle = {
-        brand: 'Ford',
-        model: 'Mustang',
-        color: 'red'
-      }
+      // const myVehicle = {
+      //   brand: 'Ford',
+      //   model: 'Mustang',
+      //   color: 'red'
+      // }
 
-      const updateMyVehicle = {
-        type: 'car',
-        year: 2021,
-        color: 'yellow'
-      }
+      // const updateMyVehicle = {
+      //   type: 'car',
+      //   year: 2021,
+      //   color: 'yellow'
+      // }
 
-      const myUpdatedVehicle = {...myVehicle, ...updateMyVehicle}
+      // const myUpdatedVehicle = {...myVehicle, ...updateMyVehicle}
 
       // Check the result object in the console:
-      console.log(myUpdatedVehicle);
+    //   console.log(myUpdatedVehicle);
+
+    function renderApp() {
+      document.getElementById('demo').innerHTML = 'Welcome!';
+    }
+
+    function renderLogin() {
+      document.getElementById('demo').innerHTML = 'Please log in';
+    }
+
+    let authenticated = true;
+
+    if (authenticated) {
+      renderApp();
+    } else {
+      renderLogin();
+    }
     </script>
-    <p>Press F12 and see the result object in the console view.</p>
+    <!-- <p>Press F12 and see the result object in the console view.</p> -->
+    <p>Try changing the "authenticated" variable to false, and run the code to see what happens.</p>
   </body>
 </html>
