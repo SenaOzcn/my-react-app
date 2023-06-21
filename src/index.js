@@ -16,22 +16,26 @@ import reportWebVitals from './reportWebVitals';
 // const root = ReactDOM.createRoot(container);
 // root.render(<p>Hello</p>)
 
-const myElement = (
-    <table>
-        <tr>
-            <th>Name</th>
-        </tr>
-        <tr>
-            <td>John</td>
-        </tr>
-        <tr>
-            <td>Elsa</td>
-        </tr>
-    </table>
-);
+// const myElement = (
+//     <table>
+//         <tr>
+//             <th>Name</th>
+//         </tr>
+//         <tr>
+//             <td>John</td>
+//         </tr>
+//         <tr>
+//             <td>Elsa</td>
+//         </tr>
+//     </table>
+// );
 
-const container = document.getElementById('root');
+// const container = document.getElementById('root');
+// const root = ReactDOM.createRoot(container);
+// root.render(myElement);
+
+const container = document.getElementById('sandy');
 const root = ReactDOM.createRoot(container);
-root.render(myElement);
+root.render(<p>Hello</p>)
 
 reportWebVitals();
