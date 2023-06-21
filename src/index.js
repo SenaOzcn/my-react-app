@@ -3,21 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
-function Car() {
-    return <h2>I am a Car!</h2>;
-}
-
-function Garage() {
-    return (
-        <>
-            <h1>Who lives in my Garage?</h1>
-            <Car />
-        </>
-    );
-}
+import Car from './Car.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Garage />);
+root.render(<Car />);
 
 reportWebVitals();
