@@ -6,13 +6,15 @@ import reportWebVitals from './reportWebVitals';
 // import Car from './Car.js';
 
 class Car extends React.Component {
+    constructor(props) {
+        super(props);
+    }
     render() {
-        return <h2>Hi, I am a {this.props.color} Car!</h2>
+        return <h2>I am a {this.props.model}!</h2>;
     }
 }
 
-const container = document.getElementById('root');
-const root = ReactDOM.createRoot(container);
-root.render(<Car color="red" />);
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Car model="Mustang" />);
 
 reportWebVitals();
