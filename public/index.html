@@ -20,6 +20,7 @@
     <div id="root"></div>
 
     <p id="demo"></p>
+    <p id="demo_2"></p>
     
     <!-- <h1>Regular Function</h1>
 
@@ -74,15 +75,23 @@
         model: 'Mustang',
         type: 'car',
         year: 2021,
-        color: 'red'
+        color: 'red',
+        registration: {
+          city: 'Houston',
+          state: 'Texas',
+          country: 'USA'
+        }
       }
       
       myVehicle(vehicleOne);
 
-      function myVehicle({type, color, brand, model}) {
+      function myVehicle({type, color, brand, model, state}) {
         const message = 'My ' + type + ' is a ' + color + ' ' + brand + ' ' + model + '.';
 
+        const msg = 'My ' + model + ' is registered in ' + state + '.';
+
         document.getElementById('demo').innerHTML = message;
+        document.getElementById('demo_2').innerHTML = msg;
       }
     </script>
   </body>
