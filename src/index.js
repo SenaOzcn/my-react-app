@@ -6,8 +6,12 @@ import reportWebVitals from './reportWebVitals';
 // import Car from './Car.js';
 
 class Car extends React.Component {
+    constructor() {
+        super();
+        this.state = {color: "red"};
+    }
     render() {
-        return <h2>Hi, I am a Car!</h2>
+        return <h2>Hi, I am a {this.state.color} Car!</h2>
     }
 }
 
