@@ -4,11 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-function Car() {
-    return <h2>Hi, I am a Car!</h2>;
+function Car(props) {
+    return <h2>I am a {props.color} Car!</h2>;
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Car />);
+root.render(<Car color="red" />);
 
 reportWebVitals();
