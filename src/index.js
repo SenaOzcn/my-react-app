@@ -4,12 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const myElement = (
-    <>
-        <p>I am a paragraph.</p>
-        <p>I am a paragraph too.</p>
-    </>
-);
+const myElement = <input type="text" />;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(myElement);
