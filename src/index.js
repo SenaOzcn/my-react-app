@@ -4,9 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const myFirstElement = <h1></h1>
+const myArray = ['apple', 'banana', 'orange'];
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(myFirstElement);
+const myList = myArray.map((item) => <p>{item}</p>)
+
+const container = document.getElementById('root');
+const root = ReactDOM.createRoot(container);
+root.render(myList);
 
 reportWebVitals();
