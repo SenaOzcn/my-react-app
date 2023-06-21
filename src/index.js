@@ -4,11 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const x = 5;
-
-const myElement = <h1>{(x) < 10 ? "Hello" : "Goodbye"}</h1>;
+function Car() {
+    return <h2>Hi, I am a Car!</h2>;
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(myElement);
+root.render(<Car />);
 
 reportWebVitals();
