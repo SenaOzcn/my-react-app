@@ -8,27 +8,23 @@ import reportWebVitals from './reportWebVitals';
 class Header extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {favoriteColor: 'red'};
+        this.state = {favoriteColor: 'yellow'}
     }
     componentDidMount() {
         setTimeout(() => {
-            this.setState({favoriteColor: 'green'})
+            this.setState({favoriteColor: 'pink'})
         }, 1000)
     }
-    getSnapshotBeforeUpdate(prevProps,prevState) {
-        document.getElementById('div1').innerHTML = 'Before the update, the favorite was ' + prevState.favoriteColor;
-    }
     componentDidUpdate() {
-        document.getElementById('div2').innerHTML = 'The updated favorite is ' + this.state.favoriteColor;
+        document.getElementById('mydiv').innerHTML = 'The updated favorite is ' + this.state.favoriteColor;
     }
     render() {
         return (
             <div>
                 <h1>My Favorite Color is {this.state.favoriteColor}</h1>
-                <div id='div1'></div>
-                <div id='div2'></div>
+                <div id="mydiv"></div>
             </div>
-        )
+        );
     }
 }
 
