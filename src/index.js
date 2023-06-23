@@ -3,42 +3,21 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import Car from './Car.js';
 
-class Container extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {show: true};
-    }
-    delHeader = () => {
-        this.setState({show: false});
-    }
-    render() {
-        let myHeader;
-        if (this.state.show) {
-            myHeader = <Child />;
-        };
-        return (
-            <div>
-                {myHeader}
-                <button type="button" onClick={this.delHeader}>DeleteHeader</button>
-            </div>
-        );
-    }
+function Car(props) {
+  return <h2>I am a { props.brand }!</h2>
 }
 
-class Child extends React.Component {
-    componentWillUnmount() {
-        alert('The component named Header is about to be unmounted.');
-    }
-    render() {
-        return (
-            <h1>Hello World!</h1>
-        );
-    }
+function Garage() {
+  return (
+    <>
+      <h1>Who lives in my Garage?</h1>
+      <Car brand="Ford" />
+    </>
+  );
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Container />);
-
+root.render(<Garage />);
+  
 reportWebVitals();
