@@ -5,14 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 function Car(props) {
-  return <h2>I am a { props.brand }!</h2>
+  return <h2>I am a { props.brand }!</h2>;
 }
 
 function Garage() {
-  return (
+  const carName="Ford";
+  return(
     <>
       <h1>Who lives in my Garage?</h1>
-      <Car brand="Ford" />
+      <Car brand={ carName} />
     </>
   );
 }
