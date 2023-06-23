@@ -5,30 +5,40 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 // import Car from './Car.js';
 
-class Header extends React.Component {
+class Container extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {favoriteColor: 'yellow'}
+        this.state = {show: true};
     }
-    componentDidMount() {
-        setTimeout(() => {
-            this.setState({favoriteColor: 'pink'})
-        }, 1000)
-    }
-    componentDidUpdate() {
-        document.getElementById('mydiv').innerHTML = 'The updated favorite is ' + this.state.favoriteColor;
+    delHeader = () => {
+        this.setState({show: false});
     }
     render() {
+        let myHeader;
+        if (this.state.show) {
+            myHeader = <Child />;
+        };
         return (
             <div>
-                <h1>My Favorite Color is {this.state.favoriteColor}</h1>
-                <div id="mydiv"></div>
+                {myHeader}
+                <button type="button" onClick={this.delHeader}>DeleteHeader</button>
             </div>
         );
     }
 }
 
+class Child extends React.Component {
+    componentWillUnmount() {
+        alert('The component named Header is about to be unmounted.');
+    }
+    render() {
+        return (
+            <h1>Hello World!</h1>
+        );
+    }
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Header />);
+root.render(<Container />);
 
 reportWebVitals();
